@@ -16,7 +16,7 @@ spec:
       serviceAccountName: proxy-injector
       containers:
         - name: proxy-injector
-          image: quay.io/TU_USUARIO/proxy-injector:latest
+          image: quay.io/rdiazgav/proxy-injector:latest
           ports:
             - containerPort: 8443
           envFrom:
