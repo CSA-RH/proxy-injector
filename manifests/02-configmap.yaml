@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: proxy-injector-config
+  namespace: proxy-injector
+data:
+  HTTP_PROXY: "http://squid.proxy-injector.svc.cluster.local:3128"
+  HTTPS_PROXY: "http://squid.proxy-injector.svc.cluster.local:3128"
+  NO_PROXY: ".cluster.local,.svc,127.0.0.1"
+  http_proxy: "http://squid.proxy-injector.svc.cluster.local:3128"
+  https_proxy: "http://squid.proxy-injector.svc.cluster.local:3128"
+  no_proxy: ".cluster.local,.svc,127.0.0.1"

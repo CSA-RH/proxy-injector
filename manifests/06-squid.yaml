@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: squid
+  namespace: proxy-injector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: squid
+  template:
+    metadata:
+      labels:
+        app: squid
+    spec:
+      containers:
+        - name: squid
+          image: docker.io/ubuntu/squid:latest
+          ports:
+            - containerPort: 3128
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: squid
+  namespace: proxy-injector
+spec:
+  selector:
+    app: squid
+  ports:
+    - port: 3128
+      targetPort: 3128
