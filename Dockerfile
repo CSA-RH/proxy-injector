@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM registry.access.redhat.com/ubi9/python-311
 WORKDIR /app
 COPY webhook/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
