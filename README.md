@@ -1,5 +1,10 @@
 # proxy-injector
 
+> ⚠️ **Disclaimer**: This is a prototype intended as a reference and source of inspiration.
+> It is not production-ready and may require adjustments to fit your specific environment and requirements.
+> Use it at your own risk.
+
+
 Mutating webhook for automatic HTTP proxy environment variable injection in OpenShift pods.
 
 ## How it works
